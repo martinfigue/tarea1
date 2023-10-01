@@ -1,3 +1,3 @@
 # tarea1
-Ignacio Sebastián Díaz Barrientos
-Martin Andrés Figueroa Hernández
+Ignacio Sebastian Diaz Barrientos
+Martin Figueroa
