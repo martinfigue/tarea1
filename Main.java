@@ -46,7 +46,7 @@ class Direccion{
     public Direccion() {
     }
 }
-class DocTributario{
+abstract class DocTributario{
     private OrdenCompra ordencompra;
     private String numero;
     private String rut;
@@ -60,7 +60,7 @@ class  Boleta extends DocTributario{
 class Factura extends DocTributario{
 
 }
-class Pago{
+abstract class Pago{
     private float monto;
     private Date fecha;
     public Pago() {
