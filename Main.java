@@ -51,7 +51,7 @@ class  Boleta extends DocTributario{
 
 }
 class Factura extends DocTributario{
-        bndjfnjr
+    
 }
 class Pago{
     private float monto;
@@ -59,7 +59,6 @@ class Pago{
     public Pago() {
     }
 }
-sdfsdfsfdsfsdfs
 class Efectivo extends Pago{
     public Efectivo (){
     }
