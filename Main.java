@@ -1,13 +1,19 @@
 import java.util.Date;
+import java.util.ArrayList;
 
 // Tarea 1
 class Cliente{
+    private ArrayList<OrdenCompra>
+ordencompra;
     private String nombre;
     private String rut;
     public Cliente() {
     }
 }
 class OrdenCompra{
+    private Cliente cliente;
+    private ArrayList<DocTributario>
+doctributario;
     private Date fecha;
     private String estado;
     public OrdenCompra() {
@@ -41,6 +47,7 @@ class Direccion{
     }
 }
 class DocTributario{
+    private OrdenCompra ordencompra;
     private String numero;
     private String rut;
     private Date fecha;
