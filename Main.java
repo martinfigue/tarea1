@@ -4,20 +4,18 @@ import java.util.Date;
 class Cliente{
     private String nombre;
     private String rut;
-
     public Cliente() {
     }
 }
 class OrdenCompra{
     private Date fecha;
     private String estado;
-
     public OrdenCompra() {
     }
 }
 class DetalleOrden{
     private int cantidad;
-
+    private DetalleOrden detalleorden;
     public DetalleOrden() {
     }
 }
@@ -26,6 +24,8 @@ class Articulo{
     private String nombre;
     private String descripcion;
     private float precio;
+
+    private ArrayList<DetalleOrden> detalle;
 
     public Articulo(float kg, String nom, String desc, float price) {
         peso = kg;
