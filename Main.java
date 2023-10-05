@@ -27,7 +27,11 @@ class Articulo{
     private String descripcion;
     private float precio;
 
-    public Articulo() {
+    public Articulo(float kg, String nom, String desc, float price) {
+        peso = kg;
+        nombre = nom;
+        descripcion = desc;
+        precio = price;
     }
 }
 class Direccion{
@@ -43,27 +47,25 @@ class DocTributario{
     public DocTributario(){
     }
 }
-class Pago{
+class Pago {
     private float monto;
     private Date fecha;
-    public Pago(){
+    public Pago() {
     }
 }
-class Efectivo{
+class Efectivo extends Pago{
     public Efectivo (){
     }
 }
-class Transferencia{
+class Transferencia extends Pago{
     private String banco;
     private String numCuenta;
-
     public Transferencia() {
     }
 }
-class Tarjeta{
+class Tarjeta extends Pago{
     private String tipo;
     private String numTransaccion;
-
     public Tarjeta() {
     }
 }
