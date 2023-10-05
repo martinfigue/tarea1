@@ -3,6 +3,8 @@ import java.util.ArrayList;
 
 // Tarea 1
 class Cliente{
+    private ArrayList<OrdenCompra>
+ordencompra;
     private String nombre;
     private String rut;
 
@@ -10,6 +12,7 @@ class Cliente{
     }
 }
 class OrdenCompra{
+    private Cliente cliente;
     private ArrayList<DocTributario>
 doctributario;
     private Date fecha;
