@@ -59,6 +59,7 @@ class Pago{
     public Pago() {
     }
 }
+sdfsdfsfdsfsdfs
 class Efectivo extends Pago{
     public Efectivo (){
     }
