@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.ArrayList;
 
 // Tarea 1
 class Cliente{
@@ -9,6 +10,8 @@ class Cliente{
     }
 }
 class OrdenCompra{
+    private ArrayList<DocTributario>
+doctributario;
     private Date fecha;
     private String estado;
 
@@ -41,6 +44,7 @@ class Direccion{
     }
 }
 class DocTributario{
+    private OrdenCompra ordencompra;
     private String numero;
     private String rut;
     private Date fecha;
