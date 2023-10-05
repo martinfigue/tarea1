@@ -55,7 +55,7 @@ class  Boleta extends DocTributario{
 
 }
 class Factura extends DocTributario{
-    
+
 }
 class Pago{
     private float monto;
