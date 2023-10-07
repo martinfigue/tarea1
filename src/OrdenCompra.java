@@ -4,15 +4,20 @@ import java.util.Date;
 public class OrdenCompra {
     private Cliente cliente;
     private ArrayList<DetalleOrden> detalles;
+    private ArrayList<Pago> pagos;
     private Date fecha;
     private String estado;
-    public OrdenCompra(Cliente c, Date f, ArrayList<Articulo> A, int[] B) {
+    public OrdenCompra(Cliente c, Date f, ArrayList<Articulo> A, ArrayList<Pago> P, int[] cantart) {
         cliente = c;
         fecha = f;
+        pagos = P;
         for(int i = 0; i<A.size(); i++){
-            DetalleOrden detalleOrden = new DetalleOrden(B[i], this, A.get(i));
+            DetalleOrden detalleOrden = new DetalleOrden(cantart[i], this, A.get(i));
             detalles.add(detalleOrden);
         }
+    }
+    public void addPago(Pago p){
+        pagos.add(p);
     }
     public float calcPrecioSinIVA(){
         float precioSinIva = 0;
