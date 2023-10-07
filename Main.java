@@ -52,6 +52,7 @@ class Articulo{
 class Direccion{
     private String direccion;
     private ArrayList<DocTributario> doctributario;
+    private ArrayList<Cliente> clientes;
 
     public Direccion() {
     }
