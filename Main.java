@@ -29,6 +29,18 @@ class DetalleOrden{
         cantidad = n;
         orden = o;
     }
+    public float calcPrecioSinIVA(){
+        return articulo.getPrecio();
+    }
+    public float calcIVA(){
+        return calcPrecioSinIVA() * 1.19;
+    }
+    public float calcPrecio(){
+        return calcPrecioSinIVA() + calcIVA();
+    }
+    public float calcPeso(){
+        return articulo.getPeso();
+    }
 }
 class Articulo{
     private float peso;
@@ -42,7 +54,7 @@ class Articulo{
         nombre = nom;
         descripcion = desc;
         precio = price;
-        
+
     }
     public float getPeso(){
         return peso;
@@ -66,7 +78,11 @@ abstract class DocTributario{
     private String numero;
     private String rut;
     private Date fecha;
-    public DocTributario(String n, String r, Date f){
+    public DocTributario(){
+    }
+}
+class  Boleta extends DocTributario{
+    public Boleta(String n, String r, Date f){
         numero = n;
         rut = r;
         fecha = f;
@@ -76,60 +92,61 @@ class  Boleta extends DocTributario{
     public Boleta(String n, String r, Date f){
         super(n, r , f);
     }
-}    
-class Factura extends DocTributario{
-    public Factura(String n, String r, Date f) {
-        super(n, r, f);
-        
-    }
-}
-abstract class Pago{
-    private float monto;
-    private Date fecha;
-    private OrdenCompra ordencompra;
-    public Pago(float m, Date f, OrdenCompra orden){
-        monto = m;
-        fecha = f;
-        ordencompra = orden;
-    }
-    public float getMonto(){
-        return monto;
-    }
-    public OrdenCompra getOrden(){
-        return ordencompra;
-    }
-}
-class Efectivo extends Pago{
-    public Efectivo (float m, Date f, OrdenCompra o){
-        super(m,f,o);
-    }
+    class Factura extends DocTributario{
+        public Boleta(String n, String r, Date f){
+            numero = n;
+            rut = r;
+            fecha = f;
+        }
 
-    public float calcDevolucion(){
-        float monto = getMonto();
-        OrdenCompra orden = getOrden();
-        float precio = orden.calcPrecio();
-        return monto - precio;
     }
-}
-class Transferencia extends Pago{
-    private String banco;
-    private String numCuenta;
-    public Transferencia(String bank, String ncuenta, float m, Date f, OrdenCompra o) {
-        super(m,f,o);
-        banco = bank;
-        numCuenta = ncuenta;
+    abstract class Pago{
+        private float monto;
+        private Date fecha;
+        private OrdenCompra ordencompra;
+        public Pago(float m, Date f, OrdenCompra orden){
+            monto = m;
+            fecha = f;
+            ordencompra = orden;
+        }
+        public float getMonto(){
+            return monto;
+        }
+        public OrdenCompra getOrden(){
+            return ordencompra;
+        }
     }
-}
-class Tarjeta extends Pago{
-    private String tipo;
-    private String numTransaccion;
-    public Tarjeta(String type, String ntransaccion, float m, Date f, OrdenCompra o) {
-        super(m,f,o);
-        tipo = type;
-        numTransaccion = ntransaccion;
+    class Efectivo extends Pago{
+        public Efectivo (float m, Date f, OrdenCompra o){
+            super(m,f,o);
+        }
+
+        public float calcDevolucion(){
+            float monto = getMonto();
+            OrdenCompra orden = getOrden();
+            float precio = orden.calcPrecio();
+            return monto - precio;
+        }
     }
-}
-public class Main {
-    public static void main(String[] args) {
+    class Transferencia extends Pago{
+        private String banco;
+        private String numCuenta;
+        public Transferencia(String bank, String ncuenta, float m, Date f, OrdenCompra o) {
+            super(m,f,o);
+            banco = bank;
+            numCuenta = ncuenta;
+        }
     }
-}
+    class Tarjeta extends Pago{
+        private String tipo;
+        private String numTransaccion;
+        public Tarjeta(String type, String ntransaccion, float m, Date f, OrdenCompra o) {
+            super(m,f,o);
+            tipo = type;
+            numTransaccion = ntransaccion;
+        }
+    }
+    public class Main {
+        public static void main(String[] args) {
+        }
+    }
