@@ -14,4 +14,32 @@ public class OrdenCompra {
             detalles.add(detalleOrden);
         }
     }
+    public float calcPrecioSinIVA(){
+        float precioSinIva = 0;
+        for(int i = 0; i<detalles.size(); i++){
+            precioSinIva += detalles.get(i).calcPrecioSinIVA();
+        }
+        return precioSinIva;
+    }
+    public float calcIVA(){
+        float iva = 0;
+        for(int i = 0; i<detalles.size(); i++){
+            iva += detalles.get(i).calcIVA();
+        }
+        return iva;
+    }
+    public float calcPrecio(){
+        float precio = 0;
+        for(int i = 0; i< detalles.size(); i++){
+            precio += detalles.get(i).calcPrecio();
+        }
+        return precio;
+    }
+    public float calcPeso(){
+        float peso = 0;
+        for(int i = 0; i< detalles.size(); i++){
+            peso += detalles.get(i).calcPeso();
+        }
+        return peso;
+    }
 }
