@@ -82,25 +82,29 @@ class Factura extends DocTributario{
 abstract class Pago{
     private float monto;
     private Date fecha;
-    public Pago(){
+    public Pago(float m, Date f){
+        monto = m;
+        fecha = f;
+    }
+    public float getMonto(){
+        return monto;
     }
 }
 class Efectivo extends Pago{
-    public Efectivo (int n, Date f){
-        fecha = f;
-        monto = n;
+    public Efectivo (float m, Date f){
+        super(m,f);
     }
 
     public float calcDevolucion(float precio){
-        return monto - precio;
+        float m = getMonto();
+        return m - precio;
     }
 }
 class Transferencia extends Pago{
     private String banco;
     private String numCuenta;
-    public Transferencia(String bank, String ncuenta, int n, Date f) {
-        monto = n;
-        fecha = f;
+    public Transferencia(String bank, String ncuenta, float m, Date f) {
+        super(m,f);
         banco = bank;
         numCuenta = ncuenta;
     }
@@ -108,9 +112,8 @@ class Transferencia extends Pago{
 class Tarjeta extends Pago{
     private String tipo;
     private String numTransaccion;
-    public Tarjeta(String type, String ntransaccion, int n, Date f) {
-        monto = n;
-        fecha = f;
+    public Tarjeta(String type, String ntransaccion, float m, Date f) {
+        super(m,f);
         tipo = type;
         numTransaccion = ntransaccion;
     }
