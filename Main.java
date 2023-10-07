@@ -16,6 +16,7 @@ class Cliente{
 class OrdenCompra{
     private Cliente cliente;
     private ArrayList<DocTributario> doctributario;
+    private ArrayList<DetalleOrden> detalleOrdens;
     private Date fecha;
     private String estado;
     public OrdenCompra() {
