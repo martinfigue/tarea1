@@ -69,8 +69,8 @@ abstract class DocTributario{
     }
 }
 class  Boleta extends DocTributario{
-    public Boleta(String n, String r, Date f,){
-        super(n,r,t);
+    public Boleta(String n, String r, Date f){
+        super(n, r , f);
     }
 }
 class Factura extends DocTributario{
