@@ -10,6 +10,8 @@ abstract class DocTributario{
         numero = n;
         rut = r;
         fecha = f;
+        this.direccion = direccion;
+        this.ordencompra = ordenCompra;
     }
     public String getNumero(){
         return numero;
@@ -45,5 +47,10 @@ abstract class DocTributario{
 
     public void setCompra(OrdenCompra ordencompra) {
         this.ordencompra = ordencompra;
+    }
+    public String toString() {
+        return "#" + numero
+                + " Rut: " + rut
+                + " Fecha: " + fecha.toString();
     }
 }

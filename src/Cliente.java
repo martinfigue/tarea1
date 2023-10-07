@@ -42,4 +42,9 @@ public class Cliente{
         if (a < 0 || a > compras.size() - 1) return null;
         return this.compras.get(a);
     }
+    public String toString() {
+        return "Cliente " + this.nombre
+                + " Rut: " + this.rut
+                + " " + this.direccion.toString();
+    }
 }
