@@ -2,9 +2,10 @@ public class DetalleOrden{
     private int cantidad;
     private Articulo articulo;
     private OrdenCompra orden;
-    public DetalleOrden(int n, OrdenCompra o) {
+    public DetalleOrden(int n, OrdenCompra o, Articulo a) {
         cantidad = n;
         orden = o;
+        articulo = a;
     }
     public float calcPrecioSinIVA(){
         return articulo.getPrecio();
