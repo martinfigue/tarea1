@@ -66,11 +66,7 @@ abstract class DocTributario{
     private String numero;
     private String rut;
     private Date fecha;
-    public DocTributario(){
-    }
-}
-class  Boleta extends DocTributario{
-    public Boleta(String n, String r, Date f){
+    public DocTributario(String n, String r, Date f){
         numero = n;
         rut = r;
         fecha = f;
@@ -80,13 +76,12 @@ class  Boleta extends DocTributario{
     public Boleta(String n, String r, Date f){
         super(n, r , f);
     }
+}    
 class Factura extends DocTributario{
-    public Boleta(String n, String r, Date f){
-        numero = n;
-        rut = r;
-        fecha = f;
+    public Factura(String n, String r, Date f) {
+        super(n, r, f);
+        
     }
-
 }
 abstract class Pago{
     private float monto;
