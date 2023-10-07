@@ -22,8 +22,11 @@ doctributario;
 class DetalleOrden{
     private int cantidad;
     private Articulo articulo;
-    public DetalleOrden(int n) {
+    private OrdenCompra orden;
+    public DetalleOrden(int n, OrdenCompra o) {
         cantidad = n;
+        orden = o;
+        o.print();
 
     }
 }
@@ -32,7 +35,7 @@ class Articulo{
     private String nombre;
     private String descripcion;
     private float precio;
-    private ArrayList<DetalleOrden> detalle;
+    private ArrayList<DetalleOrden> detalles;
 
     public Articulo(float kg, String nom, String desc, float price) {
         peso = kg;
@@ -106,6 +109,5 @@ class Tarjeta extends Pago{
 }
 public class Main {
     public static void main(String[] args) {
-
     }
 }
