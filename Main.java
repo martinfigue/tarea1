@@ -21,8 +21,10 @@ doctributario;
 }
 class DetalleOrden{
     private int cantidad;
-    private DetalleOrden detalleorden;
-    public DetalleOrden() {
+    private Articulo articulo;
+    public DetalleOrden(int n) {
+        cantidad = n;
+
     }
 }
 class Articulo{
@@ -30,7 +32,6 @@ class Articulo{
     private String nombre;
     private String descripcion;
     private float precio;
-
     private ArrayList<DetalleOrden> detalle;
 
     public Articulo(float kg, String nom, String desc, float price) {
@@ -38,6 +39,13 @@ class Articulo{
         nombre = nom;
         descripcion = desc;
         precio = price;
+        
+    }
+    public float getPeso(){
+        return peso;
+    }
+    public float getPrecio(){
+        return precio;
     }
 }
 class Direccion{
@@ -63,23 +71,31 @@ class Factura extends DocTributario{
 abstract class Pago{
     private float monto;
     private Date fecha;
-    public Pago() {
+    public Pago(){
     }
 }
 class Efectivo extends Pago{
     public Efectivo (){
     }
+
+    public float calcDevolucion(){
+
+    }
 }
 class Transferencia extends Pago{
     private String banco;
     private String numCuenta;
-    public Transferencia() {
+    public Transferencia(String bank, String ncuenta) {
+        banco = bank;
+        numCuenta = ncuenta;
     }
 }
 class Tarjeta extends Pago{
     private String tipo;
     private String numTransaccion;
-    public Tarjeta() {
+    public Tarjeta(String type, String ntransaccion) {
+        tipo = type;
+        numTransaccion = ntransaccion;
     }
 }
 public class Main {
