@@ -64,9 +64,19 @@ abstract class DocTributario{
     }
 }
 class  Boleta extends DocTributario{
+    public Boleta(String n, String r, Date f){
+        numero = n;
+        rut = r;
+        fecha = f;
+    }
 
 }
 class Factura extends DocTributario{
+    public Boleta(String n, String r, Date f){
+        numero = n;
+        rut = r;
+        fecha = f;
+    }
 
 }
 abstract class Pago{
