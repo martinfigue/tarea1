@@ -21,6 +21,7 @@ class OrdenCompra{
     public OrdenCompra() {
     }
 }
+
 class DetalleOrden{
     private int cantidad;
     private Articulo articulo;
