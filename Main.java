@@ -6,6 +6,7 @@ class Cliente{
     private ArrayList<OrdenCompra> ordencompra;
     private String nombre;
     private String rut;
+    private Direccion direccion;
     public Cliente() {
     }
 }
