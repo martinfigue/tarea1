@@ -11,7 +11,7 @@ public class DetalleOrden{
         return articulo.getPrecio();
     }
     public float calcIVA(){
-        return (float) (calcPrecioSinIVA() * 1.19);
+        return (float) (calcPrecioSinIVA() * 0.19);
     }
     public float calcPrecio(){
         return calcPrecioSinIVA() + calcIVA();
