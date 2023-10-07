@@ -58,7 +58,8 @@ class Direccion{
     private ArrayList<DocTributario> doctributarios;
     private ArrayList<Cliente> clientes;
 
-    public Direccion() {
+    public Direccion(String d) {
+        direccion = d;
     }
 }
 abstract class DocTributario{
