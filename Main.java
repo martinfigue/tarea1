@@ -7,7 +7,10 @@ class Cliente{
     private String nombre;
     private String rut;
     private Direccion direccion;
-    public Cliente() {
+    public Cliente(String n, String r, String d) {
+        nombre = n;
+        rut = r;
+        direccion = d;
     }
 }
 class OrdenCompra{
@@ -52,7 +55,7 @@ class Articulo{
 }
 class Direccion{
     private String direccion;
-    private ArrayList<DocTributario> doctributario;
+    private ArrayList<DocTributario> doctributarios;
     private ArrayList<Cliente> clientes;
 
     public Direccion() {
