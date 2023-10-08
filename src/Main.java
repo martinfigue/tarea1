@@ -20,7 +20,8 @@ public class Main {
         a1.add(mesa);
         OrdenCompra orden1 = new OrdenCompra(c1, f1, "pendiente");
         c1.addCompra(orden1);
-        
+        OrdenCompra orden2 = new OrdenCompra(c1, f1, "pendiente");
+        c1.addCompra(orden2);
 
         Efectivo e1 = new Efectivo(2000, f1, orden1);
     }
