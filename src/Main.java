@@ -46,10 +46,15 @@ public class Main {
         orden3.addDetalleOrden(velador, 7);
 
         Efectivo e1 = new Efectivo(400000, f1, orden1);
+        orden1.setEstado("compra exitosa");
         Transferencia tran1 = new Transferencia("Santander", "1001", 8700, f1, orden2);
+        orden2.setEstado("compra exitosa");
         Tarjeta tar1 = new Tarjeta("Credito","10004", 10200, f2, orden3);
         Tarjeta tar2 = new Tarjeta("Credito","10010", 5000, f3,orden3);
-
+        orden3.setEstado("compra exitosa");
+        printClientes(c1);
+        printClientes(c2);
+        printClientes(c3);
     }
 
     static public void printClientes(Cliente... clientes) {
@@ -57,16 +62,13 @@ public class Main {
         for (Cliente cliente : clientes) {
             System.out.println(cliente.toString());
         }
-        System.out.println();
     }
     static public void printArticulos(Articulo... articulos) {
         System.out.println("Articulos:");
         for (Articulo articulo : articulos) {
             System.out.println(articulo.toString());
         }
-        System.out.println();
     }
-
     
 
 }
