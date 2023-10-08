@@ -11,11 +11,13 @@ public class Main {
         Cliente c1 = new Cliente("Martin", "14.234.543-4", d1);
         Cliente c2 = new Cliente("Ignacio", "22.504.959-3", d2);
         Cliente c3 = new Cliente("Mauricio", "12..654.768-9", d3);
-        Articulo art1 = new Articulo(20, "mesa", "mueble", 1000);
-        Articulo art2 = new Articulo(10, "silla", "mueble", 500);
+        Articulo mesa = new Articulo(20, "mesa", "mueble", 1000);
+        Articulo silla = new Articulo(10, "silla", "mueble", 500);
+        Articulo lampara = new Articulo(5, "lampara", "mueble", 250);
         ArrayList<Articulo> a1 = new ArrayList<Articulo>(2);
-        a1.add(art1);
-        a1.add(art2);
+        a1.add(mesa);
+        a1.add(silla);
+        a1.add(mesa);
         OrdenCompra orden1 = new OrdenCompra(c1, f1, "pendiente");
         Efectivo e1 = new Efectivo(2000, f1, orden1);
     }
