@@ -66,6 +66,13 @@ public class Main {
         printClientes(c3);
     }
 
+    static public void printBoleta(Boleta... boletas) {
+        System.out.println("Boleta");
+        for(Boleta boleta : boletas){
+            System.out.println(boleta.toString());
+        }
+    }
+
     static public void printClientes(Cliente... clientes) {
         System.out.println("Cliente:");
         for (Cliente cliente : clientes) {
