@@ -32,6 +32,9 @@ public class OrdenCompra {
     public void setCliente(Cliente c){
         cliente = c;
     }
+    public void addDetalleOrden(Articulo articulo, int cantidad) {
+        detalles.add(new DetalleOrden(cantidad, null));
+    }
 
     public void addPago(Pago p){
         pagos.add(p);
