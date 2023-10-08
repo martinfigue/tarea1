@@ -5,6 +5,6 @@ public class Factura extends DocTributario{
         
     }
     public String toString() {
-        return "Boleta " + super.toString();
+        return "Factura " + super.toString();
     }
 }
