@@ -12,6 +12,9 @@ public abstract class Pago{
     public float getMonto(){
         return monto;
     }
+    public void setMonto(float m){
+        monto = m;
+    }
     public OrdenCompra getOrden(){
         return ordencompra;
     }
