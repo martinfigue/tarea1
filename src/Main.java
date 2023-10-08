@@ -50,11 +50,15 @@ public class Main {
 
         Efectivo e1 = new Efectivo(400000, f1, orden1);
         orden1.setEstado("compra exitosa");
+        Boleta boleta1 = new Boleta("12345", c1.getRut(), f1, d1, orden1);
+        printBoleta(boleta1);
         Transferencia tran1 = new Transferencia("Santander", "1001", 8700, f1, orden2);
         orden2.setEstado("compra exitosa");
+        Boleta boleta2 = new Boleta("45654", c1.getRut(), f2, d2, orden2);
         Tarjeta tar1 = new Tarjeta("Credito","10004", 10200, f2, orden3);
         Tarjeta tar2 = new Tarjeta("Credito","10010", 5000, f3,orden3);
         orden3.setEstado("compra exitosa");
+        Boleta boleta3 = new Boleta("12345", c3.getRut(), f3, d3, orden3);
         printClientes(c1);
         printClientes(c2);
         printClientes(c3);
