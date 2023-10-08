@@ -35,7 +35,6 @@ public class OrdenCompra {
     public void setCliente(Cliente c){
         cliente = c;
     }
-    public 
     public void addPago(Pago p){
         pagos.add(p);
     }
