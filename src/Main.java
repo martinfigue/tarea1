@@ -51,4 +51,22 @@ public class Main {
         Tarjeta tar2 = new Tarjeta("Credito","10010", 5000, f3,orden3);
 
     }
+
+    static public void printClientes(Cliente... clientes) {
+        System.out.println("Clientes:");
+        for (Cliente cliente : clientes) {
+            System.out.println(cliente.toString());
+        }
+        System.out.println();
+    }
+    static public void printArticulos(Articulo... articulos) {
+        System.out.println("Articulos:");
+        for (Articulo articulo : articulos) {
+            System.out.println(articulo.toString());
+        }
+        System.out.println();
+    }
+
+    
+
 }
