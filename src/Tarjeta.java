@@ -8,4 +8,20 @@ class Tarjeta extends Pago{
         tipo = type;
         numTransaccion = ntransaccion;
     }
+    public String getTipo(){
+        return tipo;
+    }
+    public void setTipo(String type){
+        tipo = type;
+    }
+    public String getNtransaccion(){
+        return numTransaccion;
+    }
+    public void setNtransaccion(String ntransaccion){
+            numTransaccion = ntransaccion;
+    }
+
+    public String toString(){
+        return "Tarjeta" + tipo + "Transaccion" + numTransaccion + super.toString();
+    }
 }
