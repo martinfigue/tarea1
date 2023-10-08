@@ -47,6 +47,8 @@ public class Main {
 
         Efectivo e1 = new Efectivo(400000, f1, orden1);
         Transferencia tran1 = new Transferencia("Santander", "1001", 8700, f1, orden2);
-        Tarjeta tar1 = new Tarjeta("Credito","10004", 15200, f2, orden3);
+        Tarjeta tar1 = new Tarjeta("Credito","10004", 10200, f2, orden3);
+        Tarjeta tar2 = new Tarjeta("Credito","10010", 5000, f3,orden3);
+
     }
 }
