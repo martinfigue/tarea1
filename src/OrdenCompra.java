@@ -67,4 +67,8 @@ public class OrdenCompra {
         }
         return peso;
     }
+    public String toString(){
+        return "OrdenCompra" + fecha + estado + calcPrecio() 
+                            + calcPeso();
+    }
 }
