@@ -8,4 +8,7 @@ class Transferencia extends Pago{
         banco = bank;
         numCuenta = ncuenta;
     }
+    public String toString() {
+        return "Efectivo " + super.toString();
+    }
 }
