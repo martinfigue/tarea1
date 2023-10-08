@@ -13,4 +13,7 @@ public class Direccion{
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+    public String toString() {
+        return "Direccion: " + this.direccion;
+    }
 }
