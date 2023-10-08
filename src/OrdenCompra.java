@@ -7,12 +7,12 @@ public class OrdenCompra {
     private ArrayList<Pago> pagos;
     private Date fecha;
     private String estado;
-    public OrdenCompra(Cliente c, Date f, ArrayList<Articulo> A, ArrayList<Pago> P, int[] cantart) {
+    public OrdenCompra(Cliente c, Date f, ArrayList<Articulo> A, ArrayList<Pago> P, int[] cantArticulos) {
         cliente = c;
         fecha = f;
         pagos = P;
         for(int i = 0; i<A.size(); i++){
-            DetalleOrden detalleOrden = new DetalleOrden(cantart[i], this, A.get(i));
+            DetalleOrden detalleOrden = new DetalleOrden(cantArticulos[i], this, A.get(i));
             detalles.add(detalleOrden);
         }
     }
