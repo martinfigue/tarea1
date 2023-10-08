@@ -8,7 +8,7 @@ class Efectivo extends Pago{
     public float calcDevolucion(){
         float monto = getMonto();
         OrdenCompra orden = getOrden();
-        float precio = orden.calcPrecio;
+        float precio = orden.calcPrecio();
         return monto - precio;
     }
     public String toString() {

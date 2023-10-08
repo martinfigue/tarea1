@@ -2,10 +2,9 @@ public class DetalleOrden{
     private int cantidad;
     private Articulo articulo;
     private OrdenCompra orden;
-    public DetalleOrden(int n, OrdenCompra o, Articulo a) {
+    public DetalleOrden(int n, OrdenCompra o) {
         cantidad = n;
         orden = o;
-        articulo = a;
     }
     public int getCantidad() {
         return cantidad;

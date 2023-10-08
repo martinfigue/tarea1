@@ -7,17 +7,18 @@ public class OrdenCompra {
     private ArrayList<Pago> pagos;
     private Date fecha;
     private String estado;
-    public OrdenCompra(Cliente c, Date f, ArrayList<Articulo> A, int[] cantArticulos) {
+    public OrdenCompra(Cliente c, Date f, String state) {
         cliente = c;
         fecha = f;
+        estado = state;
         pagos = new ArrayList<>();
-        for(int i = 0; i<A.size(); i++){
-            DetalleOrden detalleOrden = new DetalleOrden(cantArticulos[i], this, A.get(i));
-            detalles.add(detalleOrden);
-        }
+        detalles = new ArrayList<>();
     }
     public void addPago(Pago p){
         pagos.add(p);
+    }
+    public void addDetalle(DetalleOrden d, int cant){
+        detalles.add(new DetalleOrden(cant, this));
     }
     public float calcPrecioSinIVA(){
         float precioSinIva = 0;
