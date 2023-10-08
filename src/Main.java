@@ -67,7 +67,7 @@ public class Main {
         }
     }
     static public void printArticulos(Articulo... articulos) {
-        System.out.println("Articulos:");
+        System.out.println("Articulo:");
         for (Articulo articulo : articulos) {
             System.out.println(articulo.toString());
         }

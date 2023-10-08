@@ -39,7 +39,7 @@ public class Articulo {
         descripcion = desc;
     }
     public String toString(){
-        return "Articulo" + nombre + " " + descripcion
-                          + " " + peso + " " + precio;
+        return "nombre: " + nombre + "\n" + "descripcion: " + descripcion
+                          + "\n " + "peso: " + peso + "\n" + "precio: " +precio;
     }
 }

@@ -44,7 +44,7 @@ public class Cliente{
     }
     public String toString() {
         return "Cliente " + this.nombre
-                + " Rut: " + this.rut
-                + " " + this.direccion.toString();
+                + "\n" + "Rut: " + this.rut
+                + "\n" + "Direccion: " + this.direccion.toString();
     }
 }
