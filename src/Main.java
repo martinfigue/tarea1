@@ -27,8 +27,11 @@ public class Main {
         orden1.addDetalleOrden(lampara, 3);
         orden1.addDetalleOrden(alfombra, 2);
         orden1.addDetalleOrden(velador, 1);
-
-
+        printArticulos(mesa);
+        printArticulos(silla);
+        printArticulos(lampara);
+        printArticulos(alfombra);
+        printArticulos(velador);
         OrdenCompra orden2 = new OrdenCompra(c2, f2, "pendiente");
         c2.addCompra(orden2);
         orden2.addDetalleOrden(mesa, 1);
@@ -58,7 +61,7 @@ public class Main {
     }
 
     static public void printClientes(Cliente... clientes) {
-        System.out.println("Clientes:");
+        System.out.println("Cliente:");
         for (Cliente cliente : clientes) {
             System.out.println(cliente.toString());
         }
@@ -68,6 +71,7 @@ public class Main {
         for (Articulo articulo : articulos) {
             System.out.println(articulo.toString());
         }
+        System.out.println();
     }
     
 
