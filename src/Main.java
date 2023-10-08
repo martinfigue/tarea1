@@ -15,7 +15,7 @@ public class Main {
         Articulo silla = new Articulo(10, "silla", "mueble", 500);
         Articulo lampara = new Articulo(5, "lampara", "mueble", 250);
         Articulo alfombra = new Articulo(4, "alfombra", "alfombra de comedor", 600);
-        Articulo velador = new Articulo(10 "velador", "mueble", 700);
+        Articulo velador = new Articulo(10, "velador", "mueble", 700);
         ArrayList<Articulo> a1 = new ArrayList<Articulo>(2);
         a1.add(mesa);
         a1.add(silla);
@@ -44,8 +44,9 @@ public class Main {
         orden3.addDetalleOrden(lampara, 2);
         orden3.addDetalleOrden(alfombra, 3);
         orden3.addDetalleOrden(velador, 7);
-        
 
-        Efectivo e1 = new Efectivo(2000, f1, orden1);
+        Efectivo e1 = new Efectivo(400000, f1, orden1);
+        Transferencia tran1 = new Transferencia("Santander", "1001", 8700, f1, orden2);
+        Tarjeta tar1 = new Tarjeta("Credito","10004", 15200, f2, orden3);
     }
 }
