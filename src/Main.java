@@ -19,6 +19,9 @@ public class Main {
         a1.add(silla);
         a1.add(mesa);
         OrdenCompra orden1 = new OrdenCompra(c1, f1, "pendiente");
+        c1.addCompra(orden1);
+        
+
         Efectivo e1 = new Efectivo(2000, f1, orden1);
     }
 }
