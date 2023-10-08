@@ -15,7 +15,19 @@ public abstract class Pago{
     public void setMonto(float m){
         monto = m;
     }
+    public Date getFecha(){
+        return  fecha;
+    }
+    public void setFecha(Date f){
+        fecha = f;
+    }
     public OrdenCompra getOrden(){
         return ordencompra;
+    }
+    public void setOrden(OrdenCompra orden){
+        ordencompra = orden;
+    }
+    public String toString(){
+        return "Monto" + monto + "fecha" + fecha.toString();
     }
 }
